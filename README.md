@@ -45,7 +45,7 @@ By renaming of variables the folowing changes was made:
 Final data set
 ---------------
 
-Final data set was saved in the file named "final_ds.csv", in the current working directory. 
+Final data set was saved in the file named "final_ds.txt", in the current working directory. 
 
 Folowig properties was used:
 - Field separator: ;
@@ -54,7 +54,7 @@ Folowig properties was used:
 Second data set
 ---------------
 
-The second data set was saved in the file "aver_ds.csv", in the current working directory.
+The second data set was saved in the file "aver_ds.txt", in the current working directory.
 
 Folowig properties was used:
 - Field separator: ;

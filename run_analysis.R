@@ -87,7 +87,7 @@ rm(col.index)
 
 # saving data set to the file 
 
-write.table(x=ds, file="final_ds.cvs", dec=".", sep=";")
+write.table(x=ds, file="final_ds.txt", dec=".", sep=";")
 
 # Part 2
 # Data set, with the average of each variable for each activity and each subject.
@@ -103,16 +103,10 @@ for(i in 1:length(sub.vec)){
     subs.subject <- subset(ds, ds$subject==i)
     # subseting activity and calculating average
     for(j in 1:length(act.labes)){
-        
-        print(paste("eilutes nr ", row.numbers, "activity ", j, "subject ", i))
-        
         # making activity subset
         subs.activity <- subset(subs.subject, subs.subject$activity==act.labes[j])
         rownames(subs.activity) <- NULL
         if(dim(subs.activity)[1] != 0){
-            
-            #browser()
-            
             #calcucating mean
             aver.val <- sapply(subs.activity[, 1:86], mean)
             #adding activity
@@ -133,6 +127,6 @@ for(i in 1:length(sub.vec)){
 # convert activity to factor
 aver.ds$activity <- as.factor(aver.ds$activity)
 # write data set to file 
-write.table(x=aver.ds, file="aver_ds.csv", dec=".", sep=";")
+write.table(x=aver.ds, file="aver_ds.txt", dec=".", sep=";")
 
 rm(act.labes)    # removing act.labes from memmory
